@@ -1,15 +1,27 @@
 {
   "name": "lumina-design-icons-v2",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "A lightweight UI Icons library built for React applications",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "react",
+    "icons",
+    "ui",
+    "library"
+  ],
+  "author": "Indrajeet Ambadekar",
   "license": "ISC",
   "dependencies": {
-    "react-date-picker": "^8.0.7",
-    "react-transition-group": "^4.4.1"
-  }
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "files": [
+    "dist"
+  ]
 }
