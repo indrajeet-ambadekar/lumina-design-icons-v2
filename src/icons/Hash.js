@@ -1,15 +1,22 @@
-import React from 'react';
-  /* eslint-disable */
-const HashIcon = (props) => (
-  <React.Fragment><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
-    
-<path d="M4 15H20" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M4 9H20" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M16 3L14 21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M10 3L8 21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-
-
-  </svg></React.Fragment>
+import * as React from "react";
+const SvgHash = ({ title, titleId, ...props }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    fill="none"
+    viewBox="0 0 24 24"
+    aria-labelledby={titleId}
+    {...props}
+  >
+    {title ? <title id={titleId}>{title}</title> : null}
+    <path
+      stroke="#000"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M4 15h16M4 9h16M16 3l-2 18M10 3 8 21"
+    />
+  </svg>
 );
-
-export default HashIcon;
+export default SvgHash;

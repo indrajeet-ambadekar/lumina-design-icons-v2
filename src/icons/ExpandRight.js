@@ -1,12 +1,19 @@
-import React from 'react';
-  /* eslint-disable */
-const ExpandRightIcon = (props) => (
-  <React.Fragment><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
-    
-<path d="M8.5 14.1L4 18.6V17C4 16.4 3.6 16 3 16C2.4 16 2 16.4 2 17V21C2 21.1 2 21.3 2.1 21.4C2.2 21.6 2.4 21.8 2.6 21.9C2.7 22 2.9 22 3 22H7C7.6 22 8 21.6 8 21C8 20.4 7.6 20 7 20H5.4L9.9 15.5C10.3 15.1 10.3 14.5 9.9 14.1C9.5 13.7 8.9 13.7 8.5 14.1ZM21.7 2.3C21.5 2.1 21.2 2 21 2H17C16.4 2 16 2.4 16 3C16 3.6 16.4 4 17 4H18.6L14.1 8.5C13.7 8.9 13.7 9.5 14.1 9.9C14.3 10.1 14.5 10.2 14.8 10.2C15.1 10.2 15.3 10.1 15.5 9.9L20 5.4V7C20 7.6 20.4 8 21 8C21.6 8 22 7.6 22 7V3C22 2.8 21.9 2.5 21.7 2.3ZM15.5 14.1L9.9 8.5C9.5 8.1 8.9 8.1 8.5 8.5C8.1 8.9 8.1 9.5 8.5 9.9L14.2 15.6C14.4 15.8 14.6 15.9 14.9 15.9C15.2 15.9 15.4 15.8 15.6 15.6C15.9 15.2 15.9 14.5 15.5 14.1Z" fill="black"/>
-
-
-  </svg></React.Fragment>
+import * as React from "react";
+const SvgExpandRight = ({ title, titleId, ...props }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    fill="none"
+    viewBox="0 0 24 24"
+    aria-labelledby={titleId}
+    {...props}
+  >
+    {title ? <title id={titleId}>{title}</title> : null}
+    <path
+      fill="#000"
+      d="M8.5 14.1 4 18.6V17c0-.6-.4-1-1-1s-1 .4-1 1v4c0 .1 0 .3.1.4.1.2.3.4.5.5.1.1.3.1.4.1h4c.6 0 1-.4 1-1s-.4-1-1-1H5.4l4.5-4.5c.4-.4.4-1 0-1.4s-1-.4-1.4 0M21.7 2.3c-.2-.2-.5-.3-.7-.3h-4c-.6 0-1 .4-1 1s.4 1 1 1h1.6l-4.5 4.5c-.4.4-.4 1 0 1.4.2.2.4.3.7.3s.5-.1.7-.3L20 5.4V7c0 .6.4 1 1 1s1-.4 1-1V3c0-.2-.1-.5-.3-.7m-6.2 11.8L9.9 8.5c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4l5.7 5.7c.2.2.4.3.7.3s.5-.1.7-.3c.3-.4.3-1.1-.1-1.5"
+    />
+  </svg>
 );
-
-export default ExpandRightIcon;
+export default SvgExpandRight;

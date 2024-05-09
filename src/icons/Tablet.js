@@ -1,13 +1,22 @@
-import React from 'react';
-  /* eslint-disable */
-const TabletIcon = (props) => (
-  <React.Fragment><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
-    
-<path d="M18 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V4C20 2.89543 19.1046 2 18 2Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M12 18H12.01" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-
-
-  </svg></React.Fragment>
+import * as React from "react";
+const SvgTablet = ({ title, titleId, ...props }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    fill="none"
+    viewBox="0 0 24 24"
+    aria-labelledby={titleId}
+    {...props}
+  >
+    {title ? <title id={titleId}>{title}</title> : null}
+    <path
+      stroke="#000"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M18 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2M12 18h.01"
+    />
+  </svg>
 );
-
-export default TabletIcon;
+export default SvgTablet;

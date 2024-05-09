@@ -1,13 +1,29 @@
-import React from 'react';
-  /* eslint-disable */
-const CornerUpLeftIcon = (props) => (
-  <React.Fragment><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
-    
-<path d="M9 14L4 9L9 4" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M20 20V13C20 11.9391 19.5786 10.9217 18.8284 10.1716C18.0783 9.42143 17.0609 9 16 9H4" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-
-
-  </svg></React.Fragment>
+import * as React from "react";
+const SvgCornerUpLeft = ({ title, titleId, ...props }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    fill="none"
+    viewBox="0 0 24 24"
+    aria-labelledby={titleId}
+    {...props}
+  >
+    {title ? <title id={titleId}>{title}</title> : null}
+    <path
+      stroke="#000"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M9 14 4 9l5-5"
+    />
+    <path
+      stroke="#000"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M20 20v-7a4 4 0 0 0-4-4H4"
+    />
+  </svg>
 );
-
-export default CornerUpLeftIcon;
+export default SvgCornerUpLeft;

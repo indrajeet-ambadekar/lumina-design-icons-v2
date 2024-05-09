@@ -1,19 +1,22 @@
-import React from 'react';
-  /* eslint-disable */
-const LoaderIcon = (props) => (
-  <React.Fragment><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
-    
-<path d="M12 18V22" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M16.2402 16.24L19.0702 19.07" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M4.93018 19.07L7.76018 16.24" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M18 12H22" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M2 12H6" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M16.2402 7.75999L19.0702 4.92999" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M4.93018 4.92999L7.76018 7.75999" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M12 2V6" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-
-
-  </svg></React.Fragment>
+import * as React from "react";
+const SvgLoader = ({ title, titleId, ...props }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    fill="none"
+    viewBox="0 0 24 24"
+    aria-labelledby={titleId}
+    {...props}
+  >
+    {title ? <title id={titleId}>{title}</title> : null}
+    <path
+      stroke="#000"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M12 18v4M16.24 16.24l2.83 2.83M4.93 19.07l2.83-2.83M18 12h4M2 12h4M16.24 7.76l2.83-2.83M4.93 4.93l2.83 2.83M12 2v4"
+    />
+  </svg>
 );
-
-export default LoaderIcon;
+export default SvgLoader;

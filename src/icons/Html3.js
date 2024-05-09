@@ -1,12 +1,19 @@
-import React from 'react';
-  /* eslint-disable */
-const Html3Icon = (props) => (
-  <React.Fragment><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
-    
-<path d="M3.19482 2L4.79749 19.9943L11.9896 22L19.2015 19.9869L20.8055 2H3.19482ZM17.4762 6.12274L16.9424 12.1174L16.9444 12.1498L16.9418 12.2239V12.2232L16.5626 16.4146L16.5208 16.7869L12.0002 18.0372V18.0378L11.9965 18.041L7.48382 16.7831L7.17808 13.3179H9.39108L9.548 15.0802L12.0008 15.7446L12.0002 15.7457L14.4616 15.0714L14.7218 12.2021H9.57604L9.53188 11.717L9.43095 10.5806L9.37871 9.97038H14.9175L15.1191 7.73868H6.68247L6.63815 7.2542L6.53789 6.1172L6.48497 5.507H17.529L17.4762 6.12274Z" fill="black"/>
-
-
-  </svg></React.Fragment>
+import * as React from "react";
+const SvgHtml3 = ({ title, titleId, ...props }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    fill="none"
+    viewBox="0 0 24 24"
+    aria-labelledby={titleId}
+    {...props}
+  >
+    {title ? <title id={titleId}>{title}</title> : null}
+    <path
+      fill="#000"
+      d="m3.195 2 1.602 17.994L11.99 22l7.211-2.013L20.806 2zm14.281 4.123-.534 5.994.002.033-.002.074-.38 4.19-.041.373-4.52 1.25-.005.004-4.512-1.258-.306-3.465h2.213l.157 1.762 2.453.665 2.46-.674.26-2.869H9.577l-.044-.485-.101-1.136-.052-.61h5.539l.201-2.232H6.682l-.044-.485-.1-1.137-.053-.61h11.044z"
+    />
+  </svg>
 );
-
-export default Html3Icon;
+export default SvgHtml3;

@@ -1,21 +1,29 @@
-import React from 'react';
-  /* eslint-disable */
-const ShieldOffIcon = (props) => (
-  <React.Fragment><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
-    
-<g clip-path="url(#clip0_12_19723)">
-<path d="M19.6898 14C19.8909 13.3522 19.9954 12.6783 19.9998 12V5L11.9998 2L8.83984 3.18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M4.73 4.72998L4 4.99998V12C4 18 12 22 12 22C14.117 20.8829 16.0197 19.4001 17.62 17.62" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M1 1L23 23" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</g>
-<defs>
-<clipPath id="clip0_12_19723">
-<rect width="24" height="24" fill="white"/>
-</clipPath>
-</defs>
-
-
-  </svg></React.Fragment>
+import * as React from "react";
+const SvgShieldOff = ({ title, titleId, ...props }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    fill="none"
+    viewBox="0 0 24 24"
+    aria-labelledby={titleId}
+    {...props}
+  >
+    {title ? <title id={titleId}>{title}</title> : null}
+    <g
+      stroke="#000"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      clipPath="url(#shield-off_svg__a)"
+    >
+      <path d="M19.69 14a6.9 6.9 0 0 0 .31-2V5l-8-3-3.16 1.18M4.73 4.73 4 5v7c0 6 8 10 8 10a20.3 20.3 0 0 0 5.62-4.38M1 1l22 22" />
+    </g>
+    <defs>
+      <clipPath id="shield-off_svg__a">
+        <path fill="#fff" d="M0 0h24v24H0z" />
+      </clipPath>
+    </defs>
+  </svg>
 );
-
-export default ShieldOffIcon;
+export default SvgShieldOff;

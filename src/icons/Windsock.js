@@ -1,12 +1,19 @@
-import React from 'react';
-  /* eslint-disable */
-const WindsockIcon = (props) => (
-  <React.Fragment><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
-    
-<path d="M18.08 5L10 4.33L7 4.08V3C7 2.73478 6.89464 2.48043 6.70711 2.29289C6.51957 2.10536 6.26522 2 6 2C5.73478 2 5.48043 2.10536 5.29289 2.29289C5.10536 2.48043 5 2.73478 5 3V21C5 21.2652 5.10536 21.5196 5.29289 21.7071C5.48043 21.8946 5.73478 22 6 22C6.26522 22 6.51957 21.8946 6.70711 21.7071C6.89464 21.5196 7 21.2652 7 21V13.92L10 13.67L18.08 13C18.3311 12.9798 18.5654 12.8657 18.7359 12.6803C18.9065 12.4949 19.0008 12.2519 19 12V6C19.0008 5.74808 18.9065 5.50514 18.7359 5.31974C18.5654 5.13434 18.3311 5.02015 18.08 5ZM9 11.75L7 11.91V6.09L9 6.25V11.75ZM13 11.41L11 11.58V6.42L13 6.59V11.41ZM17 11.08L15 11.25V6.75L17 6.92V11.08Z" fill="black"/>
-
-
-  </svg></React.Fragment>
+import * as React from "react";
+const SvgWindsock = ({ title, titleId, ...props }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    fill="none"
+    viewBox="0 0 24 24"
+    aria-labelledby={titleId}
+    {...props}
+  >
+    {title ? <title id={titleId}>{title}</title> : null}
+    <path
+      fill="#000"
+      d="M18.08 5 10 4.33l-3-.25V3a1 1 0 0 0-2 0v18a1 1 0 1 0 2 0v-7.08l3-.25 8.08-.67a1 1 0 0 0 .92-1V6a1 1 0 0 0-.92-1M9 11.75l-2 .16V6.09l2 .16zm4-.34-2 .17V6.42l2 .17zm4-.33-2 .17v-4.5l2 .17z"
+    />
+  </svg>
 );
-
-export default WindsockIcon;
+export default SvgWindsock;

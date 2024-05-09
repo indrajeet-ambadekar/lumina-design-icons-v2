@@ -1,20 +1,30 @@
-import React from 'react';
-  /* eslint-disable */
-const CropIcon = (props) => (
-  <React.Fragment><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
-    
-<g clip-path="url(#clip0_12_20168)">
-<path d="M6.13 1L6 16C6 16.5304 6.21071 17.0391 6.58579 17.4142C6.96086 17.7893 7.46957 18 8 18H23" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M1 6.13L16 6C16.5304 6 17.0391 6.21071 17.4142 6.58579C17.7893 6.96086 18 7.46957 18 8V23" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</g>
-<defs>
-<clipPath id="clip0_12_20168">
-<rect width="24" height="24" fill="white"/>
-</clipPath>
-</defs>
-
-
-  </svg></React.Fragment>
+import * as React from "react";
+const SvgCrop = ({ title, titleId, ...props }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    fill="none"
+    viewBox="0 0 24 24"
+    aria-labelledby={titleId}
+    {...props}
+  >
+    {title ? <title id={titleId}>{title}</title> : null}
+    <g
+      stroke="#000"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      clipPath="url(#crop_svg__a)"
+    >
+      <path d="M6.13 1 6 16a2 2 0 0 0 2 2h15" />
+      <path d="M1 6.13 16 6a2 2 0 0 1 2 2v15" />
+    </g>
+    <defs>
+      <clipPath id="crop_svg__a">
+        <path fill="#fff" d="M0 0h24v24H0z" />
+      </clipPath>
+    </defs>
+  </svg>
 );
-
-export default CropIcon;
+export default SvgCrop;

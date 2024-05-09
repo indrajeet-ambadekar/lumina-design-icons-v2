@@ -1,12 +1,19 @@
-import React from 'react';
-  /* eslint-disable */
-const ArrowDownLeftAltIcon = (props) => (
-  <React.Fragment><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
-    
-<path d="M17 16H9.41L17.71 7.71C17.8983 7.5217 18.0041 7.2663 18.0041 7C18.0041 6.7337 17.8983 6.47831 17.71 6.29C17.5217 6.1017 17.2663 5.99591 17 5.99591C16.7337 5.99591 16.4783 6.1017 16.29 6.29L8 14.59V7C8 6.73479 7.89464 6.48043 7.70711 6.2929C7.51957 6.10536 7.26522 6 7 6C6.73478 6 6.48043 6.10536 6.29289 6.2929C6.10536 6.48043 6 6.73479 6 7V17C6.00158 17.1307 6.02876 17.2598 6.08 17.38C6.18147 17.6244 6.37565 17.8185 6.62 17.92C6.74022 17.9712 6.86932 17.9984 7 18H17C17.2652 18 17.5196 17.8946 17.7071 17.7071C17.8946 17.5196 18 17.2652 18 17C18 16.7348 17.8946 16.4804 17.7071 16.2929C17.5196 16.1054 17.2652 16 17 16Z" fill="black"/>
-
-
-  </svg></React.Fragment>
+import * as React from "react";
+const SvgArrowDownLeftAlt = ({ title, titleId, ...props }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    fill="none"
+    viewBox="0 0 24 24"
+    aria-labelledby={titleId}
+    {...props}
+  >
+    {title ? <title id={titleId}>{title}</title> : null}
+    <path
+      fill="#000"
+      d="M17 16H9.41l8.3-8.29a1.004 1.004 0 1 0-1.42-1.42L8 14.59V7a1 1 0 0 0-2 0v10a1 1 0 0 0 .08.38 1 1 0 0 0 .54.54c.12.051.25.078.38.08h10a1 1 0 0 0 0-2"
+    />
+  </svg>
 );
-
-export default ArrowDownLeftAltIcon;
+export default SvgArrowDownLeftAlt;

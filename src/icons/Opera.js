@@ -1,12 +1,19 @@
-import React from 'react';
-  /* eslint-disable */
-const OperaIcon = (props) => (
-  <React.Fragment><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
-    
-<path d="M11.9963 2C6.53426 2 2.71826 5.95814 2.71826 11.899C2.71826 17.1889 6.42946 22 12.0038 22C17.5705 22 21.2816 17.1814 21.2816 11.899C21.2816 5.95814 17.4583 2 11.9963 2ZM11.9963 20.3838C8.59933 20.3838 8.22519 15.3707 8.22519 11.6745V11.5997C8.22519 7.60421 8.82377 3.36928 11.9738 3.36928C15.1239 3.36928 15.7598 7.73138 15.7598 11.7269C15.7598 15.4231 15.3931 20.3838 11.9963 20.3838Z" fill="black"/>
-
-
-  </svg></React.Fragment>
+import * as React from "react";
+const SvgOpera = ({ title, titleId, ...props }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    fill="none"
+    viewBox="0 0 24 24"
+    aria-labelledby={titleId}
+    {...props}
+  >
+    {title ? <title id={titleId}>{title}</title> : null}
+    <path
+      fill="#000"
+      d="M11.996 2c-5.462 0-9.278 3.958-9.278 9.899C2.718 17.189 6.43 22 12.004 22c5.567 0 9.278-4.819 9.278-10.101 0-5.94-3.824-9.899-9.286-9.899m0 18.384c-3.397 0-3.77-5.013-3.77-8.71V11.6c0-3.996.598-8.23 3.748-8.23s3.786 4.361 3.786 8.357c0 3.696-.367 8.657-3.764 8.657"
+    />
+  </svg>
 );
-
-export default OperaIcon;
+export default SvgOpera;

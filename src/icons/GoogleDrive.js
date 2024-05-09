@@ -1,12 +1,19 @@
-import React from 'react';
-  /* eslint-disable */
-const GoogleDriveIcon = (props) => (
-  <React.Fragment><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
-    
-<path d="M21.4231 13.8879L15.3336 3.33792H8.66663L14.7566 13.8879H21.4231ZM8.08917 4.33835L2 14.8874L5.33356 20.6621L11.4227 10.1128L8.08917 4.33835ZM9.8219 14.8874L6.48877 20.6621H18.6666L22 14.8874L9.8219 14.8874Z" fill="black"/>
-
-
-  </svg></React.Fragment>
+import * as React from "react";
+const SvgGoogleDrive = ({ title, titleId, ...props }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    fill="none"
+    viewBox="0 0 24 24"
+    aria-labelledby={titleId}
+    {...props}
+  >
+    {title ? <title id={titleId}>{title}</title> : null}
+    <path
+      fill="#000"
+      d="m21.423 13.888-6.09-10.55H8.668l6.09 10.55zM8.09 4.338 2 14.888l3.334 5.774 6.089-10.55zm1.733 10.55-3.333 5.774h12.178L22 14.887z"
+    />
+  </svg>
 );
-
-export default GoogleDriveIcon;
+export default SvgGoogleDrive;

@@ -1,15 +1,22 @@
-import React from 'react';
-  /* eslint-disable */
-const WifiIcon = (props) => (
-  <React.Fragment><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
-    
-<path d="M12 20H12.01" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M8.52979 16.11C9.54499 15.3888 10.7595 15.0013 12.0048 15.0013C13.2501 15.0013 14.4646 15.3888 15.4798 16.11" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M5 12.55C6.97656 10.9037 9.46761 10.0021 12.04 10.0021C14.6124 10.0021 17.1034 10.9037 19.08 12.55" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M1.41992 8.99997C4.34234 6.42394 8.10422 5.00262 11.9999 5.00262C15.8956 5.00262 19.6575 6.42394 22.5799 8.99997" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-
-
-  </svg></React.Fragment>
+import * as React from "react";
+const SvgWifi = ({ title, titleId, ...props }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    fill="none"
+    viewBox="0 0 24 24"
+    aria-labelledby={titleId}
+    {...props}
+  >
+    {title ? <title id={titleId}>{title}</title> : null}
+    <path
+      stroke="#000"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M12 20h.01M8.53 16.11a6 6 0 0 1 6.95 0M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0"
+    />
+  </svg>
 );
-
-export default WifiIcon;
+export default SvgWifi;

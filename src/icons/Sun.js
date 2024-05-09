@@ -1,27 +1,29 @@
-import React from 'react';
-  /* eslint-disable */
-const SunIcon = (props) => (
-  <React.Fragment><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
-    
-<g clip-path="url(#clip0_12_19649)">
-<path d="M12 21V23" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M18.3599 18.36L19.7799 19.78" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M4.22021 19.78L5.64021 18.36" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M21 12H23" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M1 12H3" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M12 17C14.7614 17 17 14.7614 17 12C17 9.23858 14.7614 7 12 7C9.23858 7 7 9.23858 7 12C7 14.7614 9.23858 17 12 17Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M18.3599 5.63997L19.7799 4.21997" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M4.22021 4.21997L5.64021 5.63997" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M12 1V3" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</g>
-<defs>
-<clipPath id="clip0_12_19649">
-<rect width="24" height="24" fill="white"/>
-</clipPath>
-</defs>
-
-
-  </svg></React.Fragment>
+import * as React from "react";
+const SvgSun = ({ title, titleId, ...props }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    fill="none"
+    viewBox="0 0 24 24"
+    aria-labelledby={titleId}
+    {...props}
+  >
+    {title ? <title id={titleId}>{title}</title> : null}
+    <g
+      stroke="#000"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      clipPath="url(#sun_svg__a)"
+    >
+      <path d="M12 21v2M18.36 18.36l1.42 1.42M4.22 19.78l1.42-1.42M21 12h2M1 12h2M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10M18.36 5.64l1.42-1.42M4.22 4.22l1.42 1.42M12 1v2" />
+    </g>
+    <defs>
+      <clipPath id="sun_svg__a">
+        <path fill="#fff" d="M0 0h24v24H0z" />
+      </clipPath>
+    </defs>
+  </svg>
 );
-
-export default SunIcon;
+export default SvgSun;

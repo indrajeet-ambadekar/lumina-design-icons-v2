@@ -1,23 +1,29 @@
-import React from 'react';
-  /* eslint-disable */
-const BellOffIcon = (props) => (
-  <React.Fragment><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
-    
-<g clip-path="url(#clip0_12_19358)">
-<path d="M13.73 21C13.5542 21.3031 13.3019 21.5547 12.9982 21.7295C12.6946 21.9044 12.3504 21.9965 12 21.9965C11.6496 21.9965 11.3054 21.9044 11.0018 21.7295C10.6982 21.5547 10.4458 21.3031 10.27 21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M18.6298 13C18.185 11.3714 17.9729 9.68804 17.9998 8" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M6.26 6.26C6.08627 6.82361 5.99861 7.41022 6 8C6 15 3 17 3 17H17" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M17.9999 8C18.0015 6.91306 17.7079 5.84611 17.1503 4.91309C16.5927 3.98008 15.7921 3.21606 14.834 2.70264C13.876 2.18922 12.7965 1.94569 11.7108 1.99807C10.6251 2.05044 9.57409 2.39675 8.66992 3" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M1 1L23 23" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</g>
-<defs>
-<clipPath id="clip0_12_19358">
-<rect width="24" height="24" fill="white"/>
-</clipPath>
-</defs>
-
-
-  </svg></React.Fragment>
+import * as React from "react";
+const SvgBellOff = ({ title, titleId, ...props }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    fill="none"
+    viewBox="0 0 24 24"
+    aria-labelledby={titleId}
+    {...props}
+  >
+    {title ? <title id={titleId}>{title}</title> : null}
+    <g
+      stroke="#000"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      clipPath="url(#bell-off_svg__a)"
+    >
+      <path d="M13.73 21a2 2 0 0 1-3.46 0M18.63 13A17.9 17.9 0 0 1 18 8M6.26 6.26A5.9 5.9 0 0 0 6 8c0 7-3 9-3 9h14M18 8a6 6 0 0 0-9.33-5M1 1l22 22" />
+    </g>
+    <defs>
+      <clipPath id="bell-off_svg__a">
+        <path fill="#fff" d="M0 0h24v24H0z" />
+      </clipPath>
+    </defs>
+  </svg>
 );
-
-export default BellOffIcon;
+export default SvgBellOff;

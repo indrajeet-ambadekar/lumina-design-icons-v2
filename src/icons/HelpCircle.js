@@ -1,14 +1,29 @@
-import React from 'react';
-  /* eslint-disable */
-const HelpCircleIcon = (props) => (
-  <React.Fragment><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
-    
-<path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M12 17H12.01" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M9.08984 9.00002C9.32495 8.33169 9.789 7.76813 10.3998 7.40915C11.0106 7.05018 11.7287 6.91896 12.427 7.03873C13.1253 7.15851 13.7587 7.52154 14.2149 8.06355C14.6712 8.60555 14.9209 9.29154 14.9198 10C14.9198 12 11.9198 13 11.9198 13" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-
-
-  </svg></React.Fragment>
+import * as React from "react";
+const SvgHelpCircle = ({ title, titleId, ...props }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    fill="none"
+    viewBox="0 0 24 24"
+    aria-labelledby={titleId}
+    {...props}
+  >
+    {title ? <title id={titleId}>{title}</title> : null}
+    <path
+      stroke="#000"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10M12 17h.01"
+    />
+    <path
+      stroke="#000"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"
+    />
+  </svg>
 );
-
-export default HelpCircleIcon;
+export default SvgHelpCircle;

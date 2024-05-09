@@ -1,8 +1,22 @@
 const path = require("path");
+const fs = require("fs");
 
+// Function to get all icon files in the src/icons directory
+function getIconFiles() {
+  const iconsDir = "./src/icons";
+  return fs.readdirSync(iconsDir).filter(file => file.endsWith('.js'));
+}
+
+// Dynamically generate the entry object
+const entry = {};
+getIconFiles().forEach(file => {
+  const iconName = path.basename(file, ".js");
+  entry[iconName] = `./src/icons/${file}`;
+});
 module.exports = {
   mode: "production",
   entry: "./src/index.js",
+  entry: entry,
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].js",

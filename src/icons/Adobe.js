@@ -1,12 +1,19 @@
-import React from 'react';
-  /* eslint-disable */
-const AdobeIcon = (props) => (
-  <React.Fragment><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
-    
-<path d="M9.07 17.28H11.85L13.6 20.72H16.14L12 9.87L9.07 17.28ZM2 3V21L9.42 3H2ZM14.48 3L22 20.81V3H14.48Z" fill="black"/>
-
-
-  </svg></React.Fragment>
+import * as React from "react";
+const SvgAdobe = ({ title, titleId, ...props }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    fill="none"
+    viewBox="0 0 24 24"
+    aria-labelledby={titleId}
+    {...props}
+  >
+    {title ? <title id={titleId}>{title}</title> : null}
+    <path
+      fill="#000"
+      d="M9.07 17.28h2.78l1.75 3.44h2.54L12 9.87zM2 3v18L9.42 3zm12.48 0L22 20.81V3z"
+    />
+  </svg>
 );
-
-export default AdobeIcon;
+export default SvgAdobe;

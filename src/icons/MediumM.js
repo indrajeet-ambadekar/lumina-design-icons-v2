@@ -1,12 +1,19 @@
-import React from 'react';
-  /* eslint-disable */
-const MediumMIcon = (props) => (
-  <React.Fragment><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
-    
-<path d="M21.209 6.41669H22V4.08331H14.5198L12.0339 13.2499H11.9659L9.50269 4.08331H2V6.41663H2.76837C2.946 6.44554 3.1108 6.52729 3.2413 6.65121C3.3718 6.77514 3.46195 6.93549 3.5 7.11139V16.9417C3.4596 17.1113 3.36749 17.2641 3.23642 17.3791C3.10534 17.494 2.94178 17.5654 2.76837 17.5833H2V19.9167H8V17.5833H6.5V7.25H6.58752L10.0451 19.9167H12.7571L16.2599 7.25H16.3334V17.5833H14.8334V19.9167H22V17.5833H21.209C21.0396 17.5613 20.8809 17.488 20.7542 17.3734C20.6275 17.2587 20.5388 17.1081 20.5 16.9417V7.11145C20.5367 6.93875 20.6236 6.78071 20.7497 6.65713C20.8759 6.53355 21.0356 6.44992 21.209 6.41669Z" fill="black"/>
-
-
-  </svg></React.Fragment>
+import * as React from "react";
+const SvgMediumM = ({ title, titleId, ...props }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    fill="none"
+    viewBox="0 0 24 24"
+    aria-labelledby={titleId}
+    {...props}
+  >
+    {title ? <title id={titleId}>{title}</title> : null}
+    <path
+      fill="#000"
+      d="M21.209 6.417H22V4.083h-7.48l-2.486 9.167h-.068L9.503 4.083H2v2.334h.768a.9.9 0 0 1 .732.694v9.83a.84.84 0 0 1-.732.642H2v2.334h6v-2.334H6.5V7.25h.088l3.457 12.667h2.712L16.26 7.25h.073v10.333h-1.5v2.334H22v-2.334h-.791a.84.84 0 0 1-.709-.641v-9.83a.9.9 0 0 1 .709-.695"
+    />
+  </svg>
 );
-
-export default MediumMIcon;
+export default SvgMediumM;

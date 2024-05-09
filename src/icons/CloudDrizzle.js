@@ -1,25 +1,29 @@
-import React from 'react';
-  /* eslint-disable */
-const CloudDrizzleIcon = (props) => (
-  <React.Fragment><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
-    
-<g clip-path="url(#clip0_12_20232)">
-<path d="M12 21V23" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M16 19V21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M8 19V21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M12 15V17" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M16 13V15" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M8 13V15" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M20 16.58C21.0513 16.1196 21.9121 15.3116 22.4381 14.2916C22.9641 13.2715 23.1232 12.1016 22.8886 10.9782C22.6541 9.85478 22.0402 8.84623 21.1501 8.12185C20.2599 7.39748 19.1477 7.00137 18 7.00002H16.74C16.4231 5.77254 15.8189 4.63797 14.9773 3.68982C14.1358 2.74167 13.081 2.00709 11.8998 1.54664C10.7186 1.08619 9.44494 0.913035 8.18372 1.04146C6.92249 1.16989 5.70984 1.59622 4.64573 2.2853C3.58161 2.97439 2.6965 3.9065 2.06334 5.00482C1.43018 6.10313 1.06711 7.33619 1.00404 8.60237C0.940984 9.86855 1.17974 11.1316 1.70064 12.2874C2.22153 13.4432 3.00965 14.4586 4.00003 15.25" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</g>
-<defs>
-<clipPath id="clip0_12_20232">
-<rect width="24" height="24" fill="white"/>
-</clipPath>
-</defs>
-
-
-  </svg></React.Fragment>
+import * as React from "react";
+const SvgCloudDrizzle = ({ title, titleId, ...props }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    fill="none"
+    viewBox="0 0 24 24"
+    aria-labelledby={titleId}
+    {...props}
+  >
+    {title ? <title id={titleId}>{title}</title> : null}
+    <g
+      stroke="#000"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      clipPath="url(#cloud-drizzle_svg__a)"
+    >
+      <path d="M12 21v2M16 19v2M8 19v2M12 15v2M16 13v2M8 13v2M20 16.58A5 5 0 0 0 18 7h-1.26A7.998 7.998 0 0 0 2.063 5.005 8 8 0 0 0 4 15.25" />
+    </g>
+    <defs>
+      <clipPath id="cloud-drizzle_svg__a">
+        <path fill="#fff" d="M0 0h24v24H0z" />
+      </clipPath>
+    </defs>
+  </svg>
 );
-
-export default CloudDrizzleIcon;
+export default SvgCloudDrizzle;
