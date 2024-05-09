@@ -1,6 +1,6 @@
 {
-  "name": "lumina-design-icons-v2",
-  "version": "0.0.1",
+  "name": "lumina-design-iconify",
+  "version": "0.0.2",
   "description": "A lightweight UI Icons library built for React applications",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,19 +9,18 @@
     "react",
     "icons",
     "ui",
-    "library"
+    "library",
+    "svg"
   ],
   "author": "Indrajeet Ambadekar",
   "license": "ISC",
   "dependencies": {
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
   },
   "peerDependencies": {
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
-  },
-  "files": [
-    "dist"
-  ]
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
+  }
+  
 }
