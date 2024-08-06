@@ -1,6 +1,6 @@
 {
   "name": "lumina-design-iconify",
-  "version": "0.0.2",
+  "version": "0.0.6",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,10 +8,10 @@
     "make-icons": "rimraf src/icons/* && node generate-react-icons.js",
     "export-icons": "node export-react-icons.js",
     "svgr": "rimraf src/icons/* && npx @svgr/cli  --icon --title-prop --replace-attr-values '#292929bf=currentColor' --out-dir src/icons --ignore-existing -- svg-icons-renamed",
-    "build": "rimraf dist && node rename-icons.js && npm run svgr && npm run export-icons &&  webpack --config webpack.config.js && rimraf svg-icons-renamed",
+    "build": "node bump-version.js && rimraf dist && node rename-icons.js && npm run svgr && npm run export-icons &&  webpack --config webpack.config.js && rimraf svg-icons-renamed",
     "build-old": "rimraf dist && npm run make-icons && npm run export-icons &&  webpack --config webpack.config.js",
-    "prepare_package":"cp -a ./config/* ./dist/",
-    "publish":"npm run build && npm run prepare_package && cd dist && npm publish && cd ../"
+    "prepare_package": "cp -a ./config/* ./dist/",
+    "publish_package": "npm run build && npm run prepare_package && cd dist && npm publish --access public && cd ../"
   },
   "keywords": [],
   "author": "",

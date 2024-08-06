@@ -1,6 +1,6 @@
 {
-  "name": "lumina-design-iconify",
-  "version": "0.0.2",
+  "name": "@lumina-design/iconify",
+  "version": "0.0.1",
   "description": "A lightweight UI Icons library built for React applications",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
