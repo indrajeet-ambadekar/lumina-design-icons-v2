@@ -13,10 +13,10 @@ getIconFiles().forEach(file => {
   const iconName = path.basename(file, ".js");
   entry[iconName] = `./src/icons/${file}`;
 });
+
 module.exports = {
-  mode: "production",
-  entry: "./src/index.js",
-  entry: entry,
+  mode: "production", // Keep the production mode
+  entry: entry, // Use the dynamic entry object
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].js",

@@ -1,8 +1,11 @@
 {
-  "name": "lumina-design-iconify",
-  "version": "0.0.7",
+  "name": "@lumina-design/iconify",
+  "version": "0.0.15",
   "description": "",
   "main": "index.js",
+  "files": [
+    "dist/"
+  ],
   "scripts": {
     "watch": "onchange 'src/index.js' './generate-react-icons.js' 'webpack.config.js' 'package.json' -- prettier --write {{changed}}",
     "make-icons": "rimraf src/icons/* && node generate-react-icons.js",
